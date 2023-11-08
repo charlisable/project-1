@@ -1,14 +1,21 @@
 /* General Css */
 img {
-    max-width: 250px;
+    max-width: 600px;
 }
 
 /* FONTS */
 h1, h2 {
     font-family: 'Playfair Display', serif;
 }
+
+h2 {
+    font-size: 60px;
+    color: #0E204E;
+}
+
 p, button {
     font-family: 'Manrope', sans-serif;
+    font-size: 20px;
 }
 
 /* Button */
@@ -35,6 +42,7 @@ header {
 a {
     text-decoration: none;
     color: black;
+    font-size: 20px;
 }
 
 .section1,
@@ -46,6 +54,21 @@ article,
 .footer {
     display: flex;
 } 
+
+/* background blue and text white for the following: 
+section1text, section2 p, section3, footer background  */
+.section1text,
+.section2p,
+.section3,
+.section3-h2,
+footer {
+background-color: #0E204E;
+color: white;
+}
+
+
+
+
 /* Section1 */
 
 /* Section2 */
@@ -53,8 +76,30 @@ article,
 /* Section3 */
 
 /* Section4 */
+.section4-article {
+    display: flexbox
+
+}
+.desktop-icons {
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
+.icons-item {
+    width: 33%;
+    padding: 10px;
+}
+
+
 
 /* Section5 */
+.gallery {
+  display: flexbox;
+  flex-wrap: wrap;
+}
+.gallery-item {
+width: 33%;
+}
 
 /* Section6 */
 
@@ -71,10 +116,22 @@ article,
 /* @media(max-width:600px){} */
 
 /* get rid of all desktop pictures */
-/* get rid of section6 */
+/* .desktop-image {
+    display: none;
+} */
+/* get rid of section5 */
+
+/* Apply to articles so text is on top of image
+article {
+    position: absolute;
+    top: 90px; 
+    left: 25px;
+    <p> will be z-index: 1
+} */
 
 /* Apply to all sections 
 change to flex direction:column */
+
 
 /* header */
 /* need to get rid of nav and button */
@@ -94,7 +151,7 @@ change to flex direction:column */
 /* Section4 */
 /* change background to blue for icons */
 
-/* Section5 */
+/* Section6 */
 /* add mobile pics */
 /* change h2 to "Available Homes" */
 
