@@ -1,7 +1,110 @@
+/* General Css */
 img {
     max-width: 250px;
 }
 
+/* FONTS */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+p, button {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Button */
+button {
+    background-color:#0E204E;
+    color: white;
+}
+button:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid; 
+    }
+
+
+/* Header */
+header {
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Nav */
 a {
     text-decoration: none;
+    color: black;
 }
+
+.section1,
+.section2,
+.section3,
+.section6,
+.section7,
+article,
+.footer {
+    display: flex;
+} 
+/* Section1 */
+
+/* Section2 */
+
+/* Section3 */
+
+/* Section4 */
+
+/* Section5 */
+
+/* Section6 */
+
+/* Section7 */
+
+/* Section8 */
+
+/* Footer */
+
+
+/* Media Queries */
+
+/* Styles for phones, 600px and down */
+/* @media(max-width:600px){} */
+
+/* get rid of all desktop pictures */
+/* get rid of section6 */
+
+/* Apply to all sections 
+change to flex direction:column */
+
+/* header */
+/* need to get rid of nav and button */
+/* add in hamburger menu */
+
+
+/* Section1 */
+/* add mobile pic as background*/
+/* and somehow move button to section1? */
+
+/* Section2 */
+/* get rid of desktop pic and replace with mobile pic as background */
+
+/* Section3 */
+/* change background colour to white/ remove blue background colour */
+
+/* Section4 */
+/* change background to blue for icons */
+
+/* Section5 */
+/* add mobile pics */
+/* change h2 to "Available Homes" */
+
+/* Section7 */
+/* change background color to blue */
+/* button will be white and hover blue */
+
+/* Section8 */
+/* change content in p */
+
+
+/* Footer */
+/* get rid of h3, p, form */

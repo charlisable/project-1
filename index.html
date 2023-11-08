@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font css link goes here -->
+    <!-- font Fairplay link goes here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Manrope link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
@@ -43,12 +50,11 @@
         <div>
             <h2>About Pineapple Island</h2>
         </div>
-        <div>
+        <article>
             <img src="./assets/Desktop Images/1102.png" alt="suburb house">
-        </div>
-        <div>
+        
             <p>Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.</p>
-        </div>
+        </article>
 
     </div>
 
@@ -57,30 +63,29 @@
         <div>
             <h2>Why Choose Pineapple Island</h2>
         </div>
-        <div>
+        <article>
             <p>Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first. It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development. A perfect, professional built  abode that gives you the true taste of beauty and happiness.</p>
-        </div>
-        <div>
+        
             <img src="./assets/Desktop Images/1103.png" alt="dining room">
-        </div>
+        </article>
 
     </div>
     
     <!-- Section 4 -->
     <div class="section4">
         <h2>What Pineapple Land Offers</h2>
-        <div>
+        <article>
             <img src="./assets/Desktop Images/1104.png" alt="front of house">
-        </div>
-        <!-- input gallery -->
-        <div class="desktop-icons">
-            <img src="./assets/Desktop Icons/000.png" alt="eco friendly">
-            <img src="./assets/Desktop Icons/001.png" alt="smart homes">
-            <img src="./assets/Desktop Icons/002.png" alt="good rates">
-            <img src="./assets/Desktop Icons/100.png" alt="serviced apartments">
-            <img src="./assets/Desktop Icons/101.png" alt="private security">
-            <img src="./assets/Desktop Icons/102.png" alt="24/7 electricity">
-        </div>
+                <!-- icon gallery -->
+             <div class="desktop-icons">
+                <img src="./assets/Desktop Icons/000.png" alt="eco friendly">
+                <img src="./assets/Desktop Icons/001.png" alt="smart homes">
+                <img src="./assets/Desktop Icons/002.png" alt="good rates">
+                <img src="./assets/Desktop Icons/100.png" alt="serviced apartments">
+                <img src="./assets/Desktop Icons/101.png" alt="private security">
+                <img src="./assets/Desktop Icons/102.png" alt="24/7 electricity">
+            </div>
+        </article>
 
     </div>
 
@@ -125,6 +130,7 @@
         <div>
             <img src="./assets/Desktop Images/1105.png" alt="plant on desk">
         </div>
+        
         <div>
             <h2>Amazing Features</h2>
             <ul>
@@ -141,7 +147,6 @@
 
             </ul>
         </div>
-
     </div>
 
     <!-- Section 7 -->
@@ -163,25 +168,17 @@
 
         <!-- FORM -->
         <form>
-            <label for="name">Name</label><br>
-            <input type="text" id="name" name="name"><br>
-
-            <label for="phone">Phone No</label><br>
-            <input type="text" id="phone" name="phone">
-
-            <label for="email">Email</label><br>
-            <input type="text" id="email" name="email">
-
-            <label for="message">Message</label><br>
-            <input type="text" id="message" name="message">
-
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="" name="" placeholder="Phone No">
+            <input type="text" id="email" name="" placeholder="Email">
+            <input type="text" id="message" name="" placeholder="Message">
             <input type="submit" value="Send">
-          </form>
+        </form>
 
     </div>
 
     <!-- Footer -->
-    <div>
+    <div class="footer">
         <div>
             <h2>Pineapple Island</h2>
             <p>a community that gives you a taste of happiness, a place you'll love to live and an opportunity to build a home.</p>
@@ -190,6 +187,10 @@
             <h3>Follow Up</h3>
             <p>Keep up with our newsletter to get
                 updates about projects and offers</p>
+            <form action="">
+                <input type="text" id="footer-email" name="" placeholder="Email">
+                <input type="submit" value="Subscribe">
+            </form>
 
         </div>
     </div>
