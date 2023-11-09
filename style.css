@@ -8,15 +8,21 @@ h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
+p, button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color: #0E204E;
+    font-size: 32px;
+}
+
 h2 {
     font-size: 60px;
     color: #0E204E;
 }
 
-p, button {
-    font-family: 'Manrope', sans-serif;
-    font-size: 20px;
-}
 
 /* Button */
 button {
@@ -43,20 +49,27 @@ a {
     text-decoration: none;
     color: black;
     font-size: 20px;
+    padding: 10px;
 }
 
+/* Flex properties */
 .section1,
 .section2,
 .section3,
 .section6,
 .section7,
-article,
-.footer {
+footer {
     display: flex;
+    width: 90%;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin: auto;
+
 } 
 
-/* background blue and text white for the following: 
-section1text, section2 p, section3, footer background  */
+/* background blue and text white for the following: */
 .section1text,
 .section2p,
 .section3,
@@ -66,39 +79,84 @@ background-color: #0E204E;
 color: white;
 }
 
-
+/* padding for text */
+.textpadding,
+.section1text,
+.section2p,
+.section3-h2,
+.section3-p {
+    padding: 25px;
+}
 
 
 /* Section1 */
 
+
 /* Section2 */
-
-/* Section3 */
-
-/* Section4 */
-.section4-article {
-    display: flexbox
+.section2 > * {
+    display: flex;
+    flex-basis: 33%;
 
 }
+
+
+/* Section3 */
+.section3 {
+    padding: 100px;
+}
+
+.section3-p {
+    background-color: white;
+    color: #0E204E;
+    min-width: 200px;
+}
+.section3article {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+/* Section4 */
+.section4 {
+    width: 50%;
+    margin: auto;
+} 
+
+.section4-article { 
+    display : flex;
+    flex-direction: row;
+}
 .desktop-icons {
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
+    padding: 25px;
+    align-items: center;
 }
 
 .icons-item {
     width: 33%;
-    padding: 10px;
+    
 }
 
 
 
 /* Section5 */
+.section5 {
+    width: 50%;
+    margin: auto;
+}
 .gallery {
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
+  list-style: none;
+  width: 1800px;
 }
 .gallery-item {
 width: 33%;
+padding: 10px;
+
 }
 
 /* Section6 */
