@@ -1,6 +1,6 @@
 /* General Css */
 img {
-    max-width: 600px;
+    max-width: 100%;
 }
 
 /* FONTS */
@@ -8,9 +8,10 @@ h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
-p, button {
+button {
     font-family: 'Manrope', sans-serif;
     font-size: 20px;
+
 }
 
 h1 {
@@ -23,11 +24,19 @@ h2 {
     color: #0E204E;
 }
 
+p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+}
+
 
 /* Button */
 button {
     background-color:#0E204E;
     color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 button:hover {
         background-color: white;
@@ -59,18 +68,18 @@ a {
 .section6,
 .section7,
 footer {
-    display: flex;
     width: 90%;
+    margin: auto;
     padding: 20px;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
-    margin: auto;
-
+    
 } 
 
 /* background blue and text white for the following: */
 .section1text,
+.section1h2,
 .section2p,
 .section3,
 .section3-h2,
@@ -82,6 +91,7 @@ color: white;
 /* padding for text */
 .textpadding,
 .section1text,
+.section1h2,
 .section2p,
 .section3-h2,
 .section3-p {
@@ -90,37 +100,56 @@ color: white;
 
 
 /* Section1 */
+.section1 > * {
+    display: flex;
+    flex-direction: row;
+    /* flex-basis: 50%;
+    flex-grow: 1; */
+}
+
+.section1text {
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* Section2 */
-.section2 > * {
+.section2 {
+    padding: 100px;
+}
+
+.s2child {
     display: flex;
+    flex-direction: row;
     flex-basis: 33%;
+    flex-grow: 1;
 
 }
 
 
 /* Section3 */
 .section3 {
-    padding: 100px;
+    padding: 60px;
 }
 
 .section3-p {
     background-color: white;
     color: #0E204E;
-    min-width: 200px;
 }
 .section3article {
-    
     display: flex;
     flex-direction: row;
-    align-items: center;
+      
+}
+
+.threearticle {
+    display: flex;
     
 }
 
 /* Section4 */
 .section4 {
-    width: 50%;
+    width: 70%;
     margin: auto;
 } 
 
@@ -128,15 +157,24 @@ color: white;
     display : flex;
     flex-direction: row;
 }
+
+.s4article-item {
+    display: flex;
+    flex-basis: 50%;
+}
+
 .desktop-icons {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 25px;
-    align-items: center;
+    justify-content: space-around;
+
 }
 
 .icons-item {
     width: 33%;
+    /* max-width: 50px; */
     
 }
 
@@ -144,17 +182,17 @@ color: white;
 
 /* Section5 */
 .section5 {
-    width: 50%;
-    margin: auto;
+    width: 90%;
+    margin: 0 auto;
 }
 .gallery {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  width: 1800px;
+  width: 90%;
 }
 .gallery-item {
-width: 33%;
+flex-basis: 33%;
 padding: 10px;
 
 }
@@ -173,11 +211,11 @@ padding: 10px;
 /* Styles for phones, 600px and down */
 /* @media(max-width:600px){} */
 
-/* get rid of all desktop pictures */
+/* hide all desktop pictures */
 /* .desktop-image {
     display: none;
 } */
-/* get rid of section5 */
+/* hide section5 */
 
 /* Apply to articles so text is on top of image
 article {
@@ -192,13 +230,13 @@ change to flex direction:column */
 
 
 /* header */
-/* need to get rid of nav and button */
+/* need to hide nav and button */
 /* add in hamburger menu */
 
 
 /* Section1 */
 /* add mobile pic as background*/
-/* and somehow move button to section1? */
+/* add button to section1 */
 
 /* Section2 */
 /* get rid of desktop pic and replace with mobile pic as background */
