@@ -8,37 +8,36 @@ h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
-button {
+.button {
     font-family: 'Manrope', sans-serif;
-    font-size: 20px;
-
+    font-size: 15px;
 }
 
 h1 {
     color: #0E204E;
-    font-size: 32px;
+    font-size: 25px;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 40px;
     color: #0E204E;
 }
 
 p {
     font-family: 'Manrope', sans-serif;
-    font-size: 20px;
+    font-size: 15x;
 }
 
 
 /* Button */
-button {
+.button {
     background-color:#0E204E;
     color: white;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-button:hover {
+.button:hover {
         background-color: white;
         color: black;
         border: 1px solid; 
@@ -57,9 +56,10 @@ header {
 a {
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
+
 
 /* Flex properties */
 .section1,
@@ -68,19 +68,31 @@ a {
 .section6,
 .section7,
 footer {
-    width: 90%;
+    width: 100%;
     margin: auto;
-    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     
 } 
+/* padding for between sections */
+.section1,
+.section2,
+.section3,
+.section4,
+.section5,
+.section6,
+.section7,
+.section8 {
+padding-top: 50px;
+padding-bottom: 50px;
+}
 
 /* background blue and text white for the following: */
-.section1text,
-.section1h2,
-.section2p,
+.section1-text,
+.section1-h2,
+.section2-p,
 .section3,
 .section3-h2,
 footer {
@@ -90,9 +102,8 @@ color: white;
 
 /* padding for text */
 .textpadding,
-.section1text,
-.section1h2,
-.section2p,
+.section1-h2,
+.section2-p,
 .section3-h2,
 .section3-p {
     padding: 25px;
@@ -100,82 +111,85 @@ color: white;
 
 
 /* Section1 */
-.section1 > * {
-    display: flex;
-    flex-direction: row;
-    /* flex-basis: 50%;
-    flex-grow: 1; */
-}
-
-.section1text {
+.section1-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+.section1-h2 {
+    padding-bottom: 1px;
+}
+
+.section1-text > * {
+    margin: 10px;
 }
 
 
 /* Section2 */
-.section2 {
-    padding: 100px;
-}
-
-.s2child {
+.section2-article {
     display: flex;
     flex-direction: row;
-    flex-basis: 33%;
+    align-items: center;
+    border: 1px solid green; /*for visual purposes */
+}
+.section2-article > * {
+    flex-basis: 50%;
     flex-grow: 1;
-
 }
 
+/* I may need to take off padding for media queries */
+.section2 { 
+    padding: 100px;
+}
 
 /* Section3 */
 .section3 {
     padding: 60px;
 }
 
+.section3-article {
+    display: flex;
+    align-items: center;
+    border: 1px solid green; /*for visual purposes */
+}
+
+.section3-article > * {
+    flex-basis: 50%;
+    flex-grow: 1;
+    height: 100%;
+}
 .section3-p {
     background-color: white;
     color: #0E204E;
-}
-.section3article {
-    display: flex;
-    flex-direction: row;
-      
-}
-
-.threearticle {
-    display: flex;
-    
+    height: 100%;
 }
 
 /* Section4 */
 .section4 {
-    width: 70%;
+    width: 80%;
     margin: auto;
+    text-align: center;
 } 
 
 .section4-article { 
+    /* padding: 25px; */
     display : flex;
     flex-direction: row;
-}
-
-.s4article-item {
-    display: flex;
-    flex-basis: 50%;
+    justify-content: space-around;
 }
 
 .desktop-icons {
+    width: 50%;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 25px;
-    justify-content: space-around;
-
+    align-items: center;
 }
 
-.icons-item {
-    width: 33%;
-    /* max-width: 50px; */
-    
+.desktop-icons > * {
+    flex-basis: 33%;
+    max-width: 33%;
 }
 
 
@@ -183,13 +197,14 @@ color: white;
 /* Section5 */
 .section5 {
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
+    text-align: center;
 }
 .gallery {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  width: 90%;
+  /* width: 100%; */
 }
 .gallery-item {
 flex-basis: 33%;
@@ -198,18 +213,193 @@ padding: 10px;
 }
 
 /* Section6 */
+li {
+    list-style: none;
+    padding: 10px;
+    
+}
+
+.licolor {
+    background: rgba(14, 63, 51, 0.2);    
+}
+
+.section6 > * {
+    width: 50%;
+}
+.section6-h2 {
+    padding-left: 40px;
+}
+
 
 /* Section7 */
 
+.section7,
+.section6 {
+    width: 70%;
+}
+
+.section7 > * {
+    width: 50%;
+}
+
+.section7-1 {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
 /* Section8 */
+.section8 {
+    text-align: center;
+}
+
+.section8-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.section8-form > * {
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-message {
+    padding-bottom: 70px;
+}
 
 /* Footer */
+.footer-button {
+    background-color: white;
+    color: #0E204E;
+}
 
+footer > * {
+    padding: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+h3, h4 {
+    font-size: 25px;
+}
+
+.mobile-image,
+.mobile-icon {
+    display: none;
+}
 
 /* Media Queries */
 
 /* Styles for phones, 600px and down */
-/* @media(max-width:600px){} */
+@media(max-width:600px){
+
+    /* padding for text */
+/* .textpadding,
+.section1-h2,
+.section2-p,
+.section3-h2,
+.section3-p {
+    padding: ;
+} */
+
+
+    .desktop-image,
+    .desktop-icons-item,
+    .section6,
+    a {
+        display: none;
+    }
+    .mobile-image,
+    .mobile-icon {
+        display: block;
+    }
+    /* text align and font sizes */
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    /* section1 */
+    /* find a way to fit content on image */  
+    .section1-text {
+        width: 280px;
+        color: white;
+        background: none;
+        position: absolute;
+        left: 100px;
+        z-index: 1;
+    }
+    .section1-h2 {
+        background: none;
+    }
+
+    /* section2 */
+    .section2 {
+        flex-direction: column;
+    }
+    .section2-article {
+        flex-direction: column;
+    }
+    .section2-p {
+        width: 280px;
+        background: none;
+        position: absolute;
+        right: 50px;
+
+    }
+    
+    /* section3 */
+    .section3 {
+        flex-direction: column;
+        background-color: white;
+    }
+    .section3-h2 {
+        background: none;
+        color: #0E204E;
+    }
+
+    .section3-article {
+        flex-direction: column;
+    }
+
+    /* section4 */
+    .section4 {
+        width: 50%;
+        margin: auto;
+    }
+    .section4-article { 
+        width: max-content;
+        display : flex;
+        flex-direction: column;
+    }
+    
+
+    .desktop-icons {
+        background-color: #0E204E;
+        color: white;
+    }
+
+    /* Section7 */
+    .section7 > *{
+        width: max-content;       
+    }
+
+    /* Footer */
+    footer div p,
+    footer div h4,
+    footer div form {
+        display: none;
+    }
+    footer div h3 {
+        position: relative;
+        left: 120px;
+}
+
+}
 
 /* hide all desktop pictures */
 /* .desktop-image {
@@ -218,6 +408,7 @@ padding: 10px;
 /* hide section5 */
 
 /* Apply to articles so text is on top of image
+example
 article {
     position: absolute;
     top: 90px; 
@@ -256,7 +447,7 @@ change to flex direction:column */
 /* button will be white and hover blue */
 
 /* Section8 */
-/* change content in p */
+/* change p  content*/
 
 
 /* Footer */
