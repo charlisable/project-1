@@ -1,6 +1,8 @@
 :root {
     --header-font: 'Playfair Display', serif;
     --main-font: 'Manrope', sans-serif;
+    --navy-blue: #0E204E;
+    --main-font-size: 15px;
 }
 
 
@@ -14,31 +16,33 @@ h1, h2 {
     font-family: var(--header-font);
 }
 
-.button {
+button {
     font-family: var(--main-font);
-    font-size: 15px;
+    font-size: var(--main-font-size);
 }
 
 h1 {
-    color: #0E204E;
-    font-size: 25px;
+    color: var(--navy-blue);
+    font-size: 1.6rem;
+    /* font size 1.6rem is 24px */
 }
 
 h2 {
-    font-size: 40px;
-    color: #0E204E;
+    /* font size 2.6rem is 40px */
+    font-size: 2.6rem;
+    color: var(--navy-blue);
 }
 
 p {
-    font-family: 'Manrope', sans-serif;
-    font-size: 15x;
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
     line-height: 25px;
 }
 
 
 /* Button */
 button {
-    background-color:#0E204E;
+    background-color: var(--navy-blue);
     color: white;
     padding: 6px;
     padding-left: 15px;
@@ -51,26 +55,33 @@ button:hover {
     }
 
 
+    
+
 /* Header */
 header {
+    margin: 0 auto;
+    width: 95%;
     display: flex;
 	justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    
 }
 
 /* Nav */
 nav ul {
     display: flex;
+    justify-content: space-between;
 } 
+
 nav ul li {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 1.2rem;
+    margin: 10px;
 }
 
 
@@ -80,7 +91,7 @@ a {
 .section2-article,
 .section3-h2,
 footer {
-background-color: #0E204E;
+background-color: var(--navy-blue);
 color: white;
 }
 
@@ -92,10 +103,10 @@ color: white;
     padding: 35px;
 }
 
-/* for section 1 and 2 */
+/* wrapper for section 1 and 2 */
 .top-section-wrapper {
     width: 100%;
-    margin: 50px auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -103,10 +114,9 @@ color: white;
     
 }
 
-/* for section 2 and 3 */
+/* wrapper within section 2 and 3 */
 .section-content-wrapper {
     width: 85%;
-    /* max-width: 1440px; */
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -116,15 +126,18 @@ color: white;
 
 
 /* Section1 */
+
 .section1-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 .section1-h2 {
     padding-bottom: 1px;
 }
 
+/* to reduce blue space/margin */
 .section1-text > * {
     margin: 10px;
 }
@@ -137,36 +150,38 @@ color: white;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* how do I set height to fit image in section2-article */
 }
+
 .section2-article > * {
     flex-basis: 50%;
     flex-grow: 1;
 }
 
-/* centering image with flexbox within its container */
+/* centering image within its container with flexbox */
 .section2-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Padding 0px for section 2 and 3's h2 */
+/* Padding left 0px for section 2 and 3's h2 */
 .section-content-wrapper h2 {
     padding-left: 0px;
 }
 
+
 /* Section3 */
+
 .section3 {
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #0E204E;
+    background-color: var(--navy-blue);
 }
 
 .section3-article {
     background-color: white;
-    color: #0E204E;
+    color: var(--navy-blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,21 +199,23 @@ color: white;
     align-items: center;
 }
 
+
 /* Section4 */
+
 .section4 {
     width: 85%;
-    margin: auto;
+    margin: 60px auto;
     text-align: center;
 } 
 
+
+/* image and text container */
 .section4-article { 
     display : flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 .desktop-icons {
-    width: 50%;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -215,8 +232,8 @@ color: white;
 
 /* Section5 */
 .section5 {
-    width: 99%;
-    margin: 50px auto;
+    width: 95%;
+    margin: 60px auto;
     text-align: center;
 }
 .gallery {
@@ -233,7 +250,7 @@ padding: 10px;
 /* Section 6*/
 .section6 {
     width: 70%;
-    margin: 50px auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -245,12 +262,12 @@ padding: 10px;
 }
 
 .section6 li {
-    list-style: none;
+    list-style-type: none;
     padding: 10px;
     
 }
 
-.licolor {
+.li-color {
     background: rgba(14, 63, 51, 0.2);    
 }
 
@@ -263,7 +280,7 @@ padding: 10px;
 /* Section7 */
 .section7 {
     width: 70%;
-    margin: 50px auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -281,64 +298,69 @@ padding: 10px;
 /* Section8 */
 .section8 {
     text-align: center;
+    margin: 60px auto;
 }
 
 .section8-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .section8-form > * {
     margin: 10px;
     padding: 5px;
-    width:300px;
+    width:50%;
 }
 
 .form-message {
-    padding-bottom: 70px;
+    padding-bottom: 100px;
 }
 
-.section8-button {
+.form-button {
     width: fit-content;
-    background-color:#0E204E;
+    background-color: var(--navy-blue);
     color: white;
-    padding: 6px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 6px 15px;
 }
 
 /* Footer */
 footer {
-    width: 100%;
+    width: 100%;    
+} 
+
+
+.footer-wrapper {
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    
-} 
+}
+
+.footer-wrapper > * {
+    margin: 20px;
+}
 
 .footer-button {
     background-color: white;
-    color: #0E204E;
+    color: var(--navy-blue);
 }
 
-footer > * {
-    width: 30%;
-    padding: 40px;
-    
+h3 {
+    font-size: 1.6rem;
+    /* font size 1.6rem is 24px */
 }
 
-h3, h4 {
-    font-size: 25px;
-}
+
 
 
 /* Hide mobile content in desktop view */
 .mobile-image,
-.mobile-icon {
+.mobile-icon,
+.mobile-button,
+.mobile-content {
     display: none;
 }
 
@@ -348,7 +370,7 @@ h3, h4 {
 /* Styles for phones, 600px and down */
 @media(max-width:600px){
 
-/* images, icons, section, other content to hide */
+/* images, icons, section6, other content to hide */
     .desktop-image,
     .desktop-icons-item,
     .section6,
@@ -358,9 +380,11 @@ h3, h4 {
         display: none;
     }
 
-    /* displaying mobile images */
+    /* displaying mobile content */
     .mobile-image,
-    .mobile-icon {
+    .mobile-icon,
+    .mobile-button,
+    .mobile-content {
         display: block;
     }
 
@@ -370,9 +394,11 @@ h3, h4 {
         text-align: center;
     }
     p {
+        font-size: 1.3rem;
         text-align: center;
-        line-height: 25px;
+        line-height: 35px;
     }
+
 
 
     /* section1 */   
@@ -380,35 +406,50 @@ h3, h4 {
     .top-section-wrapper {
         width: 100%;
         border: 1px solid green;
+        margin: 0 auto;
 
     } 
     .section1-text {
-        width: 280px;
         color: white;
-        background: none;
+        background: none; 
+        margin: 40px;
         position: absolute;
-        left: 100px;
+        left: 10px;
         z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .section1-h2 {
         background: none;
     }
+    
+    .section1-image img {
+        min-width: 400px;
+    }
 
-    /* section2 */
+
+    /* wrapper for section 1 and 2 */
+    /* I may need to make seperate sections to add background image to section 1 and 2 */
     .section-content-wrapper { 
         flex-direction: column;
         width: 100%;
     }
+
+
+    /* section2 */
     .section2-article {
         flex-direction: column;
     }
     .section2-p {
-        width: 280px;
+        margin: 55px;
         background: none;
-        position: absolute;
-        right: 100px;
-        /* is there a way to center text or do I have manually adjust */
-        /* or I can completely hide div and add in a new div for mobile */
+        position: absolute;        
+    }
+
+    .section2-image img {
+        min-width: 400px;
     }
     
     /* section3 */
@@ -417,7 +458,7 @@ h3, h4 {
     }
     .section3-h2 {
         background: none;
-        color: #0E204E;
+        color: var(--navy-blue);
     }
 
     .section3-article {
@@ -434,9 +475,13 @@ h3, h4 {
         flex-direction: column;
         align-items: center;
     }
+    /* title word erase for section 4 and 5*/
+    .desktop-content {
+        display: none;
+    }
     
     .desktop-icons {
-        background-color: #0E204E;
+        background-color: var(--navy-blue);
         color: white;
         width: 100%;
     }
@@ -451,7 +496,7 @@ h3, h4 {
     /* Section7 */
     .section7 {
         width: 100%;
-        background-color: #0E204E;
+        background-color: var(--navy-blue);
         color: white;
         
     }
@@ -459,29 +504,36 @@ h3, h4 {
         color: white;
     }
     .section7 .button{
-        color: #0E204E;
+        color: var(--navy-blue);
         background-color: white;
         
+    }
+    /* getting rid of image div */
+    .section7-image {
+        display: none;
+    }
+
+    /* aligning section7 content to center */
+    .section7-text {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .section7-text button {
+        color: var(--navy-blue);
+        background-color: white;
     }
 
     /* Footer */
     footer div p,
-    footer div h4,
-    footer div form {
+    .footer-part-2 {
         display: none;
     }
-    footer div h3 {
-        position: relative;
-        left: 120px;
+   
 }
-
-}
-
-/* hide all desktop pictures */
-/* .desktop-image {
-    display: none;
-} */
-/* hide section5 */
 
 /* Apply to articles so text is on top of image
 example
@@ -494,12 +546,6 @@ article {
 
 /* Apply to all sections 
 change to flex direction:column */
-
-
-/* header */
-/* need to hide nav and button */
-/* add in hamburger menu */
-
 
 /* Section1 */
 /* add mobile pic as background*/
