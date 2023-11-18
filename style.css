@@ -236,16 +236,18 @@ color: white;
     margin: 60px auto;
     text-align: center;
 }
+
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 .gallery-item {
-flex-basis: 33%;
-padding: 10px;
-
+    flex-basis: 33%;
+    padding: 10px;
 }
+
+
 
 /* Section 6*/
 .section6 {
@@ -360,7 +362,9 @@ h3 {
 .mobile-image,
 .mobile-icon,
 .mobile-button,
-.mobile-content {
+.mobile-content,
+.mobile-grid,
+.mobile-menu-icon {
     display: none;
 }
 
@@ -370,21 +374,13 @@ h3 {
 /* Styles for phones, 600px and down */
 @media(max-width:600px){
 
-/* images, icons, section6, other content to hide */
-    .desktop-image,
-    .desktop-icons-item,
-    .section6,
-    header button,
-    .gallery,
-    a {
+/* Desktop images to hide for sections 1, 2, 3, 4*/
+    .desktop-image {
         display: none;
     }
 
-    /* displaying mobile content */
-    .mobile-image,
-    .mobile-icon,
-    .mobile-button,
-    .mobile-content {
+    /* displaying mobile content for sections 1, 2, 3, 4 */
+    .mobile-image {
         display: block;
     }
 
@@ -394,27 +390,39 @@ h3 {
         text-align: center;
     }
     p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
         line-height: 35px;
     }
 
 
+    /* Header */
+    /* Hiding nav and buttons */
+    header button,
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+
+
 
     /* section1 */   
    
+    /* Width and margin for sections 1 and 2 */
     .top-section-wrapper {
         width: 100%;
-        border: 1px solid green;
-        margin: 0 auto;
+        margin: 30px auto;
 
     } 
     .section1-text {
         color: white;
         background: none; 
-        margin: 40px;
+        max-width: 350px;
         position: absolute;
-        left: 10px;
         z-index: 1;
 
         display: flex;
@@ -426,44 +434,67 @@ h3 {
     }
     
     .section1-image img {
-        min-width: 400px;
+        min-width: 350px;
+    }
+
+    .mobile-button {
+        display: block;
     }
 
 
     /* wrapper for section 1 and 2 */
-    /* I may need to make seperate sections to add background image to section 1 and 2 */
     .section-content-wrapper { 
         flex-direction: column;
         width: 100%;
     }
 
+    
 
     /* section2 */
     .section2-article {
         flex-direction: column;
     }
+
+    /* .section2 */
     .section2-p {
-        margin: 55px;
+        max-width: 350px;
         background: none;
-        position: absolute;        
+        position: absolute;      
     }
 
     .section2-image img {
-        min-width: 400px;
+        min-width: 350px;
     }
+
+    /* removing desktop padding and adding mobile padding for section 2 and 3's h2 */
+    .section-content-wrapper div h2 {
+        padding: 0px 35px;
+    }
+
+
     
     /* section3 */
     .section3 {
         background-color: white;
+        /* removing top and bottom padding for mobile */
+        padding: 0px;
+        margin: 40px auto;
     }
+    
+    .section3-article {
+        flex-direction: column;
+    }
+
     .section3-h2 {
         background: none;
         color: var(--navy-blue);
     }
 
-    .section3-article {
-        flex-direction: column;
+    .section3-p {
+        padding: 0px 30px;
     }
+
+
 
     /* section4 */
     .section4 {
@@ -475,11 +506,18 @@ h3 {
         flex-direction: column;
         align-items: center;
     }
-    /* title word erase for section 4 and 5*/
-    .desktop-content {
+
+    /* section4 icons */
+    /* hiding desktop icons */
+    .desktop-icons-item {
         display: none;
     }
-    
+
+    /* displaying mobile icons */
+    .mobile-icon {
+        display: block;
+    }
+
     .desktop-icons {
         background-color: var(--navy-blue);
         color: white;
@@ -491,7 +529,58 @@ h3 {
         justify-content: center;
         align-items: center;
     }
-    
+
+    /* Erasing dekstop only words in h2 for section 4 and 5*/
+    .desktop-content {
+        display: none;
+    }
+    /* display mobile only words in h2 sections 4 and 5 */
+    .mobile-content {
+        display: block;
+    }
+
+
+
+    /* section5 Gallery*/
+    /* hiding desktop gallery */
+    .gallery {
+        display: none;
+    }
+
+    /* displaying mobile gallery */
+    .mobile-grid {
+        display: block;
+    }
+
+    .section5 p {
+        padding: 0px 20px;
+    }
+
+    .mobile-grid {
+        margin: 0 auto;
+        width: max-content;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* making bigger pictures fit in gallery  */
+    .grid-wide-2 {
+        grid-column: span 2;
+
+    }
+    .grid-tall-2 {
+        grid-row: span 2;
+    }
+
+
+
+    /*Hiding Section6 */
+    .section6{
+        display: none;
+    }
+
+
 
     /* Section7 */
     .section7 {
@@ -503,11 +592,12 @@ h3 {
     .section7 h2 {
         color: white;
     }
-    .section7 .button{
+    .section7 button{
         color: var(--navy-blue);
         background-color: white;
         
     }
+
     /* getting rid of image div */
     .section7-image {
         display: none;
@@ -515,62 +605,35 @@ h3 {
 
     /* aligning section7 content to center */
     .section7-text {
-        width: 80%;
+        width: 90%;
+        padding: 20px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
     }
 
     .section7-text button {
         color: var(--navy-blue);
         background-color: white;
+        margin: 20px;
     }
+
+
+    /* Section8 */
+    .section8 {
+        width: 90%;
+    }
+
 
     /* Footer */
     footer div p,
     .footer-part-2 {
         display: none;
     }
-   
+    .footer-wrapper div h3 {
+        font-size: 1.4rem;
+    }
+
 }
 
-/* Apply to articles so text is on top of image
-example
-article {
-    position: absolute;
-    top: 90px; 
-    left: 25px;
-    <p> will be z-index: 1
-} */
-
-/* Apply to all sections 
-change to flex direction:column */
-
-/* Section1 */
-/* add mobile pic as background*/
-/* add button to section1 */
-
-/* Section2 */
-/* get rid of desktop pic and replace with mobile pic as background */
-
-/* Section3 */
-/* change background colour to white/ remove blue background colour */
-
-/* Section4 */
-/* change background to blue for icons */
-
-/* Section6 */
-/* add mobile pics */
-/* change h2 to "Available Homes" */
-
-/* Section7 */
-/* change background color to blue */
-/* button will be white and hover blue */
-
-/* Section8 */
-/* change p  content*/
-
-
-/* Footer */
-/* get rid of h3, p, form */
